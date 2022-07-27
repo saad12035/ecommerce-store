@@ -4,7 +4,7 @@ import './header.component.css';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import SearchBar from "material-ui-search-bar";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import BasicMenu from "../menu.jsx";
+import BasicMenu from "./web-menu.component.jsx";
 import {MenuData} from "../../utils/menu-constants.jsx";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined.js";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
@@ -13,11 +13,11 @@ function HeaderComponent() {
     return (
         <div className="header-box">
             <Grid container alignItems="center" >
-                <Grid item xs={3} md={6} lg={1} xl={1} />
-                <Grid item xs={3} md={6} lg={1} xl={2} >
+                <Grid item xs={1} md={2} lg={1} xl={1} />
+                <Grid item xs={3} md={2} lg={1} xl={2} >
                     <img src="src/assets/Bed-Bath-and-Beyond-Logo-Font-Family-Free-Download-min.jpg" alt={"he"}/>
                 </Grid>
-                <Grid item xs={3} md={6} lg={1} xl={6}>
+                <Grid item xs={4} md={2} lg={1} xl={6}>
                     <SearchBar
                         onChange={() => console.log('onChange')}
                         onRequestSearch={() => console.log('onRequestSearch')}
@@ -26,26 +26,26 @@ function HeaderComponent() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={3} md={6} lg={1} xl={1.3} >
+                <Grid item xs={2.5} md={2} lg={1} xl={1.3} >
                     <div className="header-signin">
                         <h2>Sign in</h2>
                         <AccountCircleOutlinedIcon fontSize={"large"} style={{marginTop:13}}/>
                     </div>
                 </Grid>
-                <Grid item xs={3} md={6} lg={1} xl={1.5} >
+                <Grid item xs={1} md={2} lg={1} xl={1.5} >
                     <ShoppingCartOutlinedIcon fontSize={"large"}/>
                 </Grid>
             </Grid>
             <Grid container mt="-10px" alignItems="baseline"  justifyContent="center">
-                <Grid item xs={3} md={6} lg={5} xl={0.5}/>
+                <Grid item xs={1} md={6} lg={5} xl={0.5}/>
                     {
                        MenuData.map((item,index)=>(
                            <Grid item >
-                           <BasicMenu name={item.title} key={index}/>
+                           <BasicMenu name={item.title} index={index}/>
                            </Grid>
                        ))
                     }
-                <Grid item xs={3} md={6} lg={5} xl={1.1}/>
+                <Grid item xs={1} md={6} lg={5} xl={1.1}/>
                 <Grid item >
                     <Button
                         color="secondary"
@@ -68,7 +68,7 @@ function HeaderComponent() {
                     </Button>
                 </Grid>
             </Grid>
-            <h1 style={{height:700}}>hi</h1>
+            <h1 style={{height:700,backgroundColor:"wheat"}}/>
         </div>
     );
 }

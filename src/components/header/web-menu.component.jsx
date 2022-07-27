@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import WebItemMenuComponent from "./web-item-menu.component.jsx";
 
 export default function BasicMenu(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -27,7 +28,6 @@ export default function BasicMenu(props) {
             >
                 {props.name}
             </Button>
-
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -37,9 +37,7 @@ export default function BasicMenu(props) {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <WebItemMenuComponent type={props.index}/>
             </Menu>
         </div>
     );
