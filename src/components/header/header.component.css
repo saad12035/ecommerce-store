@@ -1,25 +1,40 @@
-.header-box{
+.header-box {
     padding-top: 1rem;
     background-color: #384a9c;
 }
-.header-box img{
+
+.header-box img {
     width: 200px;
     height: 100px;
 }
-.header-searchbar{
+
+.header-searchbar {
     color: black;
     background-color: white;
     border-radius: 2rem;
     width: 100%;
     margin-left: 0;
 }
-.header-signin{
+
+.header-signin {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
     margin-left: 2rem;
 }
-.second-menu-item{
+
+.second-menu-item {
     margin-top: -20px;
+}
+
+.tertiary-menu {
+    padding-left: 7rem;
+    padding-right: 6rem;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+}
+
+.tertiary-menu p {
+    color: black;
 }

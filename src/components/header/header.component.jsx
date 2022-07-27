@@ -5,7 +5,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import SearchBar from "material-ui-search-bar";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import BasicMenu from "./web-menu.component.jsx";
-import {MenuData} from "../../utils/menu-constants.jsx";
+import {SecondaryMenuData, TertiaryMenuData} from "../../utils/menu-constants.jsx";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined.js";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
@@ -40,7 +40,7 @@ function HeaderComponent() {
             <Grid container mt="-10px" alignItems="baseline"  justifyContent="center">
                 <Grid item xs={1} md={6} lg={5} xl={0.5}/>
                     {
-                       MenuData.map((item,index)=>(
+                       SecondaryMenuData.map((item,index)=>(
                            <Grid item >
                            <BasicMenu name={item.mainTitle} index={index}/>
                            </Grid>
@@ -69,7 +69,15 @@ function HeaderComponent() {
                     </Button>
                 </Grid>
             </Grid>
-            <h1 style={{height:700,backgroundColor:"wheat"}}/>
+            <Grid container alignItems="center" justifyContent="space-around" className="tertiary-menu">
+                {
+                    TertiaryMenuData.map((item)=>(
+                        <Grid item>
+                            <p>{item.mainTitle}</p>
+                        </Grid>
+                    ))
+                }
+            </Grid>
         </div>
     );
 }

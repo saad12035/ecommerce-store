@@ -1,10 +1,10 @@
 import React from 'react';
 import {Grid} from "@mui/material";
 import './menu-item-design.component.css';
-import {MenuData} from "../../utils/menu-constants.jsx";
+import {SecondaryMenuData} from "../../utils/menu-constants.jsx";
 
 function MenuItemDesignComponent() {
-    const data=MenuData[0];
+    const data=SecondaryMenuData[0];
     return (
         <div className="wrapper">
             <div className="menu1">

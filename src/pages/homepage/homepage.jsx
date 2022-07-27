@@ -6,6 +6,10 @@ function Homepage() {
     return (
         <div className="container">
             <HeaderComponent/>
+            <div className="hero-section">
+                <img src="src/assets/hero-img-1.webp" alt="hero-img-1"/>
+                <img src="src/assets/hero-img-2.webp" alt="hero-img-2"/>
+            </div>
         </div>
     );
 }

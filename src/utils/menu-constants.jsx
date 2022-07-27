@@ -1,4 +1,4 @@
-export const MenuData = [
+export const SecondaryMenuData = [
   {
     mainTitle: 'Design',
     title1:"deals and steals",
@@ -37,3 +37,32 @@ export const MenuData = [
       "kitchen deals"]
   },
 ];
+
+export const TertiaryMenuData = [
+  {
+    mainTitle: 'Bedding',
+  },
+  {
+    mainTitle: 'Bath',
+  },
+  {
+    mainTitle: 'Kitchen',
+  },
+  {
+    mainTitle: 'Dining',
+  },
+  {
+    mainTitle: 'Storage&cleaning',
+  },
+  {
+    mainTitle: 'Home Decor',
+  },
+  {
+    mainTitle: 'Furniture',
+  },
+  {
+    mainTitle: 'Outdoor',
+  },
+];
+
+
