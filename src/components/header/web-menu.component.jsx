@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import WebItemMenuComponent from "./web-item-menu.component.jsx";
 
@@ -33,11 +32,12 @@ export default function BasicMenu(props) {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
+                style={{marginTop:30}}
                 MenuListProps={{
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <WebItemMenuComponent type={props.index}/>
+                <WebItemMenuComponent  type={props.index}/>
             </Menu>
         </div>
     );

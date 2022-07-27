@@ -1,21 +1,22 @@
 import React from 'react';
-import {MenuItem} from "@mui/material";
+import MenuItemDesignComponent from "./menu-item-design.component.jsx";
+
 
 function renderSwitch(param) {
-    switch(param) {
+    switch(param.type) {
         case 0:
-            return <h4 style={{padding:20}}>work on this</h4>
+            return <MenuItemDesignComponent/>
         case 1:
-            return 'ba';
+            return <MenuItemDesignComponent/>
         default:
-            return 'foo';
+            return <MenuItemDesignComponent/>
     }
 }
 
 function WebItemMenuComponent(props) {
     return (
         <>
-            {renderSwitch(props.type)}
+            {renderSwitch(props)}
         </>
     );
 }

@@ -9,6 +9,7 @@ import {MenuData} from "../../utils/menu-constants.jsx";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined.js";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+
 function HeaderComponent() {
     return (
         <div className="header-box">
@@ -41,7 +42,7 @@ function HeaderComponent() {
                     {
                        MenuData.map((item,index)=>(
                            <Grid item >
-                           <BasicMenu name={item.title} index={index}/>
+                           <BasicMenu name={item.mainTitle} index={index}/>
                            </Grid>
                        ))
                     }

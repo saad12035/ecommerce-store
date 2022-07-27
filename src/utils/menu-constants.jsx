@@ -1,31 +1,37 @@
 export const MenuData = [
   {
-    title: 'Design',
-    dealsTitle:"deals and steals",
+    mainTitle: 'Design',
+    title1:"deals and steals",
+    title2:"shop on sale",
     deals:["bedding deals",
       "bath deals",
-     "kitchen deals"]
+     "kitchen deals",
+      "vacuums & cleaning deals",
+      "dining deals",
+      "health & beauty deals"
+    ]
   },
   {
-    title: 'Shop by room',
+    mainTitle: 'Shop by room',
+    dealsTitle:"deals",
     deals:["sleep",
       "decorate",
       "furnish"]
   },
   {
-    title: 'Registry',
+    mainTitle: 'Registry',
     deals:["bedding deals",
       "bath deals",
       "kitchen deals"]
   },
   {
-    title: 'College',
+    mainTitle: 'College',
     deals:["bedding deals",
       "bath deals",
       "kitchen deals"]
   },
   {
-    title: 'Inspiration',
+    mainTitle: 'Inspiration',
     deals:["bedding deals",
       "bath deals",
       "kitchen deals"]
