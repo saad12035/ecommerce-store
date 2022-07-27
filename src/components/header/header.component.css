@@ -1,0 +1,25 @@
+.header-box{
+    padding-top: 1rem;
+    background-color: #384a9c;
+}
+.header-box img{
+    width: 200px;
+    height: 100px;
+}
+.header-searchbar{
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+    width: 100%;
+    margin-left: 0;
+}
+.header-signin{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+.second-menu-item{
+    margin-top: -20px;
+}
