@@ -1,2 +1,4 @@
-[[plugins]]      package = "./plugins/pnpm-preinstaller"
-[build.environment]         NPM_FLAGS="--version"
+[[plugins]]
+package = "./plugins/pnpm-preinstaller"
+[build.environment]
+NPM_FLAGS="--version"
