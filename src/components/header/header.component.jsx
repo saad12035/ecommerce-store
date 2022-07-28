@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Grid} from "@mui/material";
+import {Box, Button, Grid} from "@mui/material";
 import './header.component.css';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import SearchBar from "material-ui-search-bar";
@@ -14,11 +14,11 @@ function HeaderComponent() {
     return (
         <div className="header-box">
             <Grid container alignItems="center" >
-                <Grid item xs={1} md={2} lg={1} xl={1} />
-                <Grid item xs={3} md={2} lg={1} xl={2} >
+                <Grid item xs={0} md={0} lg={1} xl={1} />
+                <Grid item xs={12} sm={3}  md={3} lg={1} xl={2} >
                     <img src="src/assets/Bed-Bath-and-Beyond-Logo-Font-Family-Free-Download-min.jpg" alt={"he"}/>
                 </Grid>
-                <Grid item xs={4} md={2} lg={1} xl={6}>
+                <Grid item xs={12} sm={3} md={5} lg={1} xl={6}>
                     <SearchBar
                         onChange={() => console.log('onChange')}
                         onRequestSearch={() => console.log('onRequestSearch')}
@@ -27,18 +27,18 @@ function HeaderComponent() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={2.5} md={2} lg={1} xl={1.3} >
+                <Grid item xs={6} sm={3} md={2} lg={1} xl={1.3} >
                     <div className="header-signin">
                         <h2>Sign in</h2>
                         <AccountCircleOutlinedIcon fontSize={"large"} style={{marginTop:13}}/>
                     </div>
                 </Grid>
-                <Grid item xs={1} md={2} lg={1} xl={1.5} >
+                <Grid item xs={6}sm={3}  md={2} lg={1} xl={1.5} >
                     <ShoppingCartOutlinedIcon fontSize={"large"}/>
                 </Grid>
             </Grid>
-            <Grid container mt="-10px" alignItems="baseline"  justifyContent="center">
-                <Grid item xs={1} md={6} lg={5} xl={0.5}/>
+            <Grid container mt="-5px" alignItems="baseline"  justifyContent="center">
+                <Grid item xs={1} md={12} lg={5} xl={1}/>
                     {
                        SecondaryMenuData.map((item,index)=>(
                            <Grid item >
@@ -46,8 +46,16 @@ function HeaderComponent() {
                            </Grid>
                        ))
                     }
-                <Grid item xs={1} md={6} lg={5} xl={1.1}/>
-                <Grid item >
+                <Grid item xs={0} md={0} lg={5} xl={1}/>
+                <Box
+                    component={Grid}
+                    item
+                    sm={6}
+                    md={6}
+                    lg={3}
+                    xl={3}
+                    display={{ xs: "none", sm: "block" }}
+                >
                     <Button
                         color="secondary"
                         startIcon={<ShoppingBagOutlinedIcon
@@ -59,22 +67,35 @@ function HeaderComponent() {
                             <h6 style={{margin:0}}>Springfield</h6>
                         </div>
                     </Button>
-                </Grid>
-                <Grid item>
+                </Box>
+                <Box
+                    component={Grid}
+                    item
+                    sm={6}
+                    md={6}
+                    lg={2}
+                    xl={2}
+                    display={{ xs: "none", sm: "block",md:"block" }}
+                >
                     <Button color="secondary" startIcon={<LocalShippingOutlinedIcon style={{fontSize:40}} />}>
                         <div>
                             <h5>Same day delivery</h5>
                             <h6>Miami</h6>
                         </div>
                     </Button>
-                </Grid>
+                </Box>
             </Grid>
             <Grid container alignItems="center" justifyContent="space-around" className="tertiary-menu">
                 {
                     TertiaryMenuData.map((item)=>(
-                        <Grid item>
+                        <Box
+                            component={Grid}
+                            item
+                            pl={6}
+                            display={{ xs: "none", sm: "block",md:"block" }}
+                        >
                             <p>{item.mainTitle}</p>
-                        </Grid>
+                        </Box>
                     ))
                 }
             </Grid>

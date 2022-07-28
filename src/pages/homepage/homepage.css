@@ -1,7 +1,10 @@
 .hero-section{
-    width: 100vw;
     background-color: white;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 .hero-section img{
-    padding-top: 50px;
+    width: 80vw;
+    padding-top: 1rem;
 }
