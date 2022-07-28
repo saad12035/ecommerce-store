@@ -1,2 +1,1 @@
-[build.environment]
-  NPM_FLAGS="--prefix=/dev/null"
+pnpm build || ( npm install pnpm && pnpm build )
