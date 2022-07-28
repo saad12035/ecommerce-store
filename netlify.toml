@@ -1,4 +1,4 @@
 [[plugins]]
-package = "plugins/pnpm-preinstaller/index.cjs"
+package = "./plugins/pnpm-preinstaller"
 [build.environment]
 NPM_FLAGS="--version"
