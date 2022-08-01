@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from "../../components/product.cards.component";
 import {getProducts} from "./api.jsx";
+import {Grid} from "@mui/material";
 
 
 const responsive = {
@@ -28,11 +29,9 @@ const responsive = {
 
 function Homepage() {
     const [result, setResult] = useState([]);
-
     useEffect(() => {
         getProducts().then(response => setResult(response));
     }, []);
-
 
 
     return (
@@ -72,15 +71,23 @@ function Homepage() {
                 </div>
                 <img src="src/assets/home-img4.webp" alt="home-img4"/>
                 <h1 style={{color:"#1c1e4c"}}>smart deals on college basics</h1>
-                    <Carousel
+                <Grid
+                    container
+                    direction="row"
+                    justifyContent="space-evenly"
+                    alignItems="center"
+                >
+                <Carousel
                         className="test"
                         responsive={responsive}
                     >
-                        <ProductCard result={result}/>
-                        <ProductCard result={result}/>
-                        <ProductCard result={result}/>
-                        <ProductCard result={result}/>
+                        {
+                            result?.map((item)=> (
+                                <ProductCard result={item}/>
+                            ))
+                        }
                     </Carousel>
+                </Grid>
             </div>
         </div>
     );

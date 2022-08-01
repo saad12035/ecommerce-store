@@ -10,30 +10,20 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import {Box, Grid} from "@mui/material";
 
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
+
 
 export default function ProductCard(props) {
-
     return (
-        <Card sx={{ maxWidth: 345 }} style={{width: "60vw", margin: 'auto'}}  >
+        <Card sx={{ maxWidth: 345,height:415 }} style={{marginBottom:20}}  >
             <CardMedia
                 component="img"
-                style={{marginLeft:"5rem",height: '50%', width: '50%'}}
+                style={{ marginLeft:"20%",padding:10,height: 'auto', width: 'auto',maxHeight:250,maxWidth:250}}
                 image={props.result.image}
                 alt="Paella dish"
             />
             <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                    {props.result.description}
+                <Typography variant="h5" style={{color:"black"}}>
+                    {props.result.title}
                 </Typography>
             </CardContent>
             <CardActions>
