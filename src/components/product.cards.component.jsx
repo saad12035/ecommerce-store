@@ -8,13 +8,13 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import {Box, Grid} from "@mui/material";
+import {Box, Button, Grid} from "@mui/material";
 
 
 
 export default function ProductCard(props) {
     return (
-        <Card sx={{ maxWidth: 345,height:415 }} style={{marginBottom:20}}  >
+        <Card sx={{ maxWidth: 345,height:415 }} style={{paddingBottom:80,marginBottom:20}}  >
             <CardMedia
                 component="img"
                 style={{ marginLeft:"20%",padding:10,height: 'auto', width: 'auto',maxHeight:250,maxWidth:250}}
@@ -22,7 +22,7 @@ export default function ProductCard(props) {
                 alt="Paella dish"
             />
             <CardContent>
-                <Typography variant="h5" style={{color:"black"}}>
+                <Typography variant="h6" style={{color:"black"}}>
                     {props.result.title}
                 </Typography>
             </CardContent>
@@ -69,6 +69,11 @@ export default function ProductCard(props) {
                     </Box>
                 </Grid>
             </CardActions>
+            <div style={{backgroundColor:"red",padding:5,width:"10vw",marginLeft:"30%"}}>
+                <Button style={{color:"yellow"}}>
+                    Add to cart
+                </Button>
+            </div>
         </Card>
     );
 }
