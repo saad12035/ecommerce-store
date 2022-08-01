@@ -1,5 +1,5 @@
 .footer{
-    padding: 5%;
+    padding: 2%;
     background-color: #dadada;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,12 @@
     width: 100%;
 }
 .solid{
-    width: 50vw;
+    width: 84vw;
     color: black;
     margin-top: 2rem ;
-    margin-left: 9rem;
+    margin-left: 4rem;
+}
+.footer-sub-items-wrapper{
+    display: flex;
+    flex-direction: column;
 }
