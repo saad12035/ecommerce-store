@@ -37,3 +37,7 @@
     margin-left: -50px!important;
     overflow: visible!important;
 }
+.body{
+    background-color: white;
+    padding-bottom: 50px;
+}
