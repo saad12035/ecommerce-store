@@ -1,0 +1,19 @@
+.footer{
+    padding: 5%;
+    background-color: #dadada;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.footer-textfield{
+    color: white;
+    background-color: white;
+    width: 100%;
+}
+.solid{
+    width: 50vw;
+    color: black;
+    margin-top: 2rem ;
+    margin-left: 9rem;
+}
