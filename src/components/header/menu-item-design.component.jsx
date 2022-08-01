@@ -1,5 +1,4 @@
 import React from 'react';
-import {Grid} from "@mui/material";
 import './menu-item-design.component.css';
 import {SecondaryMenuData} from "../../utils/menu-constants.jsx";
 
@@ -18,14 +17,14 @@ function MenuItemDesignComponent() {
                 <h4>{data.title2.toUpperCase()}</h4>
             </div>
             <div className="menu2">
-                <h4>{data.title1.toUpperCase()}</h4>
-                {data.deals.map((a)=>(
+                <h4>{data.title3.toUpperCase()}</h4>
+                <h4>{data.title4.toUpperCase()}</h4>
+                {data.deals2.map((a)=>(
                     <div style={{display:"flex",flexDirection:"column"}}>
                         <p color="secondary" >{a}</p>
                     </div>
                 ))
                 }
-                <h4>{data.title2.toUpperCase()}</h4>
             </div>
             <div className="menu3">
                 <img src="src/assets/menu1-mern-img.png" alt="hi"/>

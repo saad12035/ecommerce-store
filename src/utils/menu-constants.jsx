@@ -3,12 +3,18 @@ export const SecondaryMenuData = [
     mainTitle: 'Design',
     title1:"deals and steals",
     title2:"shop on sale",
+    title3:"shop deals",
+    title4:"shop catalog",
     deals:["bedding deals",
       "bath deals",
      "kitchen deals",
       "vacuums & cleaning deals",
       "dining deals",
       "health & beauty deals"
+    ],
+    deals2:[
+      "bedding deals",
+      "bath deals",
     ]
   },
   {
