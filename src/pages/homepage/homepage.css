@@ -23,5 +23,17 @@
 }
 .test{
     width: 80vw;
-    margin-left: 10rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
+    margin-left: 1rem;
+}
+.react-multiple-carousel__arrow{
+    background-color: deepskyblue!important;
+}
+.react-multiple-carousel__arrow--right {
+    right: calc(1px)!important;
+}
+.react-multiple-carousel__arrow--left {
+    margin-left: -50px!important;
+    overflow: visible!important;
 }

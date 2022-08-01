@@ -81,6 +81,7 @@ function Homepage() {
                     >
                         <Carousel
                             className="test"
+                            renderButtonGroupOutside
                             responsive={responsive}
                         >
                             {
