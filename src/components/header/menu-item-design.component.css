@@ -5,7 +5,7 @@
     overflow: scroll;
     width: 100vw;
     height: 65vh;
-    margin: 0 auto;
+    margin-top: 4rem;
     flex-wrap: wrap;
 }
 .menu1{

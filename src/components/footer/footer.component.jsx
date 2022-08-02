@@ -27,7 +27,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={2.5}
                     display={{xs: "none", sm: "block"}}
@@ -38,7 +38,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={2}
                     style={{backgroundColor:"deepskyblue",maxHeight:"3.5rem",textAlign:"center",alignContent:"center"}}
@@ -51,12 +51,12 @@ function FooterComponent() {
             </Grid>
             <hr className="solid"/>
             <Grid className="second-footer" container justifyContent="space-around" textAlign="left" alignContent="center">
-                <Grid item xl={0}/>
+                <Grid item md={0} xl={0}/>
                 <Box
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={2}
                     display={{xs: "none", sm: "block"}}
@@ -75,7 +75,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={2}
                     display={{xs: "none", sm: "block"}}
@@ -99,7 +99,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={2}
                     display={{xs: "none", sm: "block"}}
@@ -130,7 +130,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={3}
                     lg={6}
                     xl={4}
                     display={{xs: "none", sm: "block"}}
@@ -151,7 +151,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={2}
                     lg={6}
                     xl={1}
                     display={{xs: "none", sm: "block"}}
@@ -162,7 +162,7 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={2}
                     lg={6}
                     xl={1}
                     display={{xs: "none", sm: "block"}}
@@ -173,10 +173,10 @@ function FooterComponent() {
                     component={Grid}
                     item
                     sm={6}
-                    md={6}
+                    md={2}
                     lg={6}
                     xl={1}
-                    display={{xs: "none", sm: "block"}}
+                    display={{xs: "none", sm: "block",md:"block"}}
                 >
                     <img style={{marginTop:"-8px"}} width={150} src="src/assets/footer-img-3.svg" alt="footer-img"/>
                 </Box>

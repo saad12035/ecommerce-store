@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {Box, Button, Grid} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import {Box, Button, Grid, Typography} from "@mui/material";
 import './header.component.css';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import SearchBar from "material-ui-search-bar";
@@ -11,7 +12,7 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 
 
-function testing(){
+function secondHeader(){
     return(
         <Grid container alignItems="center" justifyContent="space-around" className="tertiary-menu">
             {
@@ -33,7 +34,6 @@ function testing(){
 function HeaderComponent() {
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > lastScrollY) {
@@ -44,6 +44,7 @@ function HeaderComponent() {
             setLastScrollY(window.scrollY);
         }
     };
+    let navigate = useNavigate();
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', controlNavbar);
@@ -69,10 +70,32 @@ function HeaderComponent() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={6} sm={3} md={2} lg={1} xl={1.3} >
-                    <div className="header-signin">
-                        <h2>Sign in</h2>
-                        <AccountCircleOutlinedIcon fontSize={"large"} style={{marginTop:13}}/>
+                <Grid className="dropdown" item xs={6} sm={3} md={2} lg={1} xl={1.3} >
+                    <Button className="header-signin">
+                        <h2 style={{color:"white"}}>Sign in</h2>
+                        <AccountCircleOutlinedIcon fontSize={"large"} style={{color:"white"}}/>
+                    </Button>
+                    <div className="dropdown-content">
+                        <div className="header-signin-info">
+                            <Typography variant="subtitle2" color="secondary">
+                                Welcome rewards
+                            </Typography>
+                            <Typography variant="caption" color="secondary">
+                                Earn & redeem points on every purchase across our family of brands.
+                            </Typography>
+                            <Button onClick={()=>navigate('/store/account/login')} className="header-content-signup-button">
+                                <Typography variant="h6" color="secondary">
+                                    Sign In or Create new
+                                </Typography>
+                            </Button>
+                            <hr style={{color:"white"}}/>
+                            <div className="header-signup-information-help">
+                                <Typography variant="subtitle1" color="secondary">
+                                    Have a question for us?<br/>
+                                   <a href="#" style={{color:"red"}}> We’re here to help</a>
+                                </Typography>
+                            </div>
+                        </div>
                     </div>
                 </Grid>
                 <Grid item xs={6}sm={3}  md={2} lg={1} xl={1.5} >
@@ -130,10 +153,10 @@ function HeaderComponent() {
                         </Button>
                     </Box>
                 </Grid>
-                    {testing()}
+                    {secondHeader()}
                     </>
                     :
-                   testing()
+                   secondHeader()
             }
         </div>
     );

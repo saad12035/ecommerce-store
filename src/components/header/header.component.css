@@ -41,3 +41,48 @@
 .tertiary-menu p {
     color: black;
 }
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-top:1px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16vw;
+    min-height: 20vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 10000
+}
+.header-signin-info{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #52a8f6;
+}
+.header-content-signup-button{
+    text-align: center;
+    width: 18vw;
+    background-color: white;
+    border: 1px dotted whitesmoke!important;
+}
+.header-signup-information-help{
+    text-align: center;
+}
